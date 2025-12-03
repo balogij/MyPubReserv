@@ -1,3 +1,7 @@
-import streamlit as st
+from flask import Flask
 
-st.write("Hello World")
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
